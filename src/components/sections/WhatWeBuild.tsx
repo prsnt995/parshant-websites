@@ -5,7 +5,7 @@ const examples = [
   "Custom AI Models",
   "iOS App (iPhone/iPad)",
   "Android App (Play Store)",
-  "India 🇮🇳 ↔ Korea 🇰🇷 Import & Export",
+  "Cloud & API Integrations",
   "LLM & AI Assistant",
   "E-Commerce Store",
   "Admin Dashboard",

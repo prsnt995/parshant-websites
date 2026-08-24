@@ -14,16 +14,16 @@ export function About() {
           <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-8">
             Innovating Technology & <br />
             <span className="bg-gradient-to-r from-orange-600 via-amber-500 to-indigo-600 bg-clip-text text-transparent">
-              India 🇮🇳 ↔ Korea 🇰🇷 Cross-Border Trade
+              Digital Software Solutions
             </span>
           </h2>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed">
-            <strong className="text-foreground">{siteConfig.name}</strong>, owned and led by <strong className="text-foreground">{siteConfig.owner}</strong>, is a multi-disciplinary company specializing in custom <strong className="text-foreground">AI Models</strong>, native <strong className="text-foreground">iOS & Android Apps</strong>, and cross-border <strong className="text-blue-600 dark:text-blue-400 font-bold">Import & Export between India & South Korea</strong>.
+            <strong className="text-foreground">{siteConfig.name}</strong>, owned and led by <strong className="text-foreground">{siteConfig.owner}</strong>, is a tech company specializing in custom <strong className="text-foreground">AI Models</strong>, native <strong className="text-foreground">iOS & Android Apps</strong>, and high-performance <strong className="text-foreground">Web Applications</strong>.
           </p>
           
           <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
-            From cross-border trading between India and South Korea to delivering cutting-edge AI software and mobile apps globally, we drive innovation and trade.
+            Delivering cutting-edge AI software and mobile apps globally, we drive digital innovation and help businesses build modern products.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 text-left">
@@ -38,9 +38,9 @@ export function About() {
               <p className="text-xs text-muted-foreground">Engineering polished mobile apps published for global users.</p>
             </div>
             <div className="bg-background border border-border p-6 rounded-2xl">
-              <Globe2 className="text-blue-600 mb-3" size={28} />
-              <h3 className="font-bold text-base mb-1">India ↔ Korea Trade</h3>
-              <p className="text-xs text-muted-foreground">Importing & exporting spices, food goods, tech, and consumer items.</p>
+              <Globe2 className="text-sky-600 mb-3" size={28} />
+              <h3 className="font-bold text-base mb-1">Full-Stack Web Systems</h3>
+              <p className="text-xs text-muted-foreground">Designing fast Next.js websites, cloud backends, and databases.</p>
             </div>
           </div>
           

@@ -15,16 +15,16 @@ const services = [
     ]
   },
   {
-    id: "import-export",
-    title: "India 🇮🇳 ↔ Korea 🇰🇷 Import & Export",
-    badge: "Cross-Border Trade",
-    badgeColor: "bg-blue-500/10 text-blue-600 border-blue-500/20",
-    icon: <Globe2 className="w-8 h-8 mb-4 text-blue-600 dark:text-blue-400" />,
+    id: "cloud-infrastructure",
+    title: "Cloud & API Infrastructure",
+    badge: "Reliable & Scalable",
+    badgeColor: "bg-sky-500/10 text-sky-600 border-sky-500/20",
+    icon: <Globe2 className="w-8 h-8 mb-4 text-sky-600 dark:text-sky-400" />,
     items: [
-      "Authentic Indian Goods & Spices Export to Korea",
-      "Korean Products & Tech Goods Import to India",
-      "Customs Clearance & Regulatory Compliance",
-      "B2B Wholesale Supply Chain Logistics"
+      "RESTful & GraphQL API Architecture",
+      "Cloud Database Design (Firebase, PostgreSQL)",
+      "Serverless Deployments & Microservices",
+      "High Availability & Security Best Practices"
     ]
   },
   {
@@ -81,7 +81,7 @@ export function Services() {
             Services & Expertise
           </h2>
           <p className="text-muted-foreground text-lg">
-            From AI models and mobile apps to cross-border trading systems, we bring end-to-end technical excellence.
+            From custom AI models and mobile apps to scalable cloud platforms, we bring end-to-end technical excellence.
           </p>
         </div>
         

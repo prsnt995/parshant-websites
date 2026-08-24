@@ -3,12 +3,12 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "India 🇮🇳 ↔ South Korea 🇰🇷 Import & Export Trade",
-    desc: "Cross-border trading network exporting authentic Indian products & goods to South Korea, and importing premium Korean tech and consumer items.",
-    tech: "Logistics, Customs, B2B Supply Chain",
-    category: "Import & Export",
-    icon: <Globe2 size={18} className="text-blue-600" />,
-    image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1200&auto=format&fit=crop"
+    title: "NOEUL Native & Cross-Platform Mobile Suite",
+    desc: "Full-featured iOS & Android application ecosystem built for seamless performance, real-time sync, and user engagement.",
+    tech: "Swift, Kotlin, React Native, Firebase",
+    category: "Mobile Apps",
+    icon: <Globe2 size={18} className="text-emerald-600" />,
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop"
   },
   {
     title: "NOEUL AI Model & Assistant Engine",

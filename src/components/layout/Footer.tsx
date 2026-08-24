@@ -16,7 +16,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-md leading-relaxed mb-4">
-              Building custom AI Models, high-performance iOS & Android Apps, and managing <strong className="text-blue-600 dark:text-blue-400">India 🇮🇳 ↔ South Korea 🇰🇷 Import & Export Trade</strong>.
+              Building custom AI Models, high-performance iOS & Android Apps, and modern Web Applications.
             </p>
             <p className="text-xs text-muted-foreground font-semibold">
               Owner & Founder: {siteConfig.owner}
@@ -61,7 +61,7 @@ export function Footer() {
         
         <div className="border-t border-border/80 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-muted-foreground gap-4">
           <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
-          <p className="font-semibold text-foreground">AI Models • iOS & Android Apps • India 🇮🇳 ↔ South Korea 🇰🇷 Import & Export</p>
+          <p className="font-semibold text-foreground">AI Models • iOS & Android Apps • Custom Web Solutions</p>
         </div>
       </div>
     </footer>
