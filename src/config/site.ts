@@ -1,5 +1,6 @@
 export const siteConfig = {
   name: "NOEUL ENTERPRISES",
+  url: "https://noeulenterprises.kr",
   description: "AI Models, iOS & Android Apps, and India-Korea Import & Export Trade.",
   owner: "Parshant",
   founder: "Parshant",
