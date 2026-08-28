@@ -1,4 +1,4 @@
-import { ArrowUpRight, Cpu, Globe2 } from "lucide-react";
+import { ArrowUpRight, Cpu, Smartphone } from "lucide-react";
 import Image from "next/image";
 
 const projects = [
@@ -7,7 +7,7 @@ const projects = [
     desc: "Full-featured iOS & Android application ecosystem built for seamless performance, real-time sync, and user engagement.",
     tech: "Swift, Kotlin, React Native, Firebase",
     category: "Mobile Apps",
-    icon: <Globe2 size={18} className="text-emerald-600" />,
+    icon: <Smartphone size={15} className="text-slate-700" />,
     image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop"
   },
   {
@@ -15,61 +15,61 @@ const projects = [
     desc: "Custom generative AI model integration platform powering smart automation, fine-tuned LLMs, and predictive vision analytics.",
     tech: "Python, PyTorch, Next.js, FastAPI",
     category: "AI & Machine Learning",
-    icon: <Cpu size={18} className="text-indigo-600" />,
+    icon: <Cpu size={15} className="text-slate-700" />,
     image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop"
   }
 ];
 
 export function Projects() {
   return (
-    <section id="projects" className="section-padding bg-muted/30">
+    <section id="projects" className="section-padding bg-background border-b border-border">
       <div className="container">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-primary px-3 py-1 bg-primary/10 rounded-full border border-primary/20 inline-block mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <span className="text-xs font-semibold uppercase tracking-wider text-slate-600 px-3 py-1 bg-slate-100 rounded-md border border-slate-200 inline-block mb-3">
             Portfolio Showcase
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-foreground">
             Featured Projects & Products
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-base">
             A glimpse into the flagship products, AI platforms, and mobile apps built by NOEUL ENTERPRISES.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, idx) => (
-            <div key={idx} className="group bg-background border border-border rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1">
+            <div key={idx} className="bg-background border border-border rounded-lg overflow-hidden hover:border-slate-400 transition-colors flex flex-col justify-between">
               <div>
-                <div className="relative h-56 w-full bg-muted overflow-hidden">
+                <div className="relative h-48 w-full bg-slate-100 overflow-hidden border-b border-border">
                   <Image 
                     src={project.image} 
                     alt={project.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover"
                   />
-                  <div className="absolute top-4 left-4 bg-background/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold flex items-center gap-2 border border-border shadow-xs">
+                  <div className="absolute top-3 left-3 bg-background/95 border border-border px-2.5 py-1 rounded-md text-xs font-medium flex items-center gap-1.5 text-foreground">
                     {project.icon}
                     <span>{project.category}</span>
                   </div>
                 </div>
                 
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="flex justify-between items-start mb-3">
-                    <h3 className="text-xl font-bold">{project.title}</h3>
-                    <a href="#contact" className="p-2 bg-muted rounded-full text-muted-foreground hover:text-foreground transition-colors" aria-label="View Project">
-                      <ArrowUpRight size={18} />
+                <div className="p-5 flex flex-col flex-grow">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-base font-bold text-foreground">{project.title}</h3>
+                    <a href="#contact" className="p-1.5 bg-slate-100 border border-slate-200 rounded-md text-slate-700 hover:bg-slate-200 transition-colors" aria-label="View Project">
+                      <ArrowUpRight size={16} />
                     </a>
                   </div>
                   
-                  <p className="text-muted-foreground text-sm mb-6 flex-grow leading-relaxed">
+                  <p className="text-muted-foreground text-xs sm:text-sm mb-4 leading-relaxed">
                     {project.desc}
                   </p>
                 </div>
               </div>
 
-              <div className="p-6 pt-0">
-                <div className="text-xs font-mono font-semibold bg-muted text-foreground px-3.5 py-1.5 rounded-full inline-block">
+              <div className="p-5 pt-0">
+                <div className="text-xs font-mono font-medium bg-slate-100 text-slate-700 px-3 py-1 rounded-md border border-slate-200 inline-block">
                   {project.tech}
                 </div>
               </div>

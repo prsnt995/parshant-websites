@@ -67,107 +67,108 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="section-padding bg-muted/30">
-      <div className="container max-w-6xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8">
+    <section id="contact" className="section-padding bg-background border-b border-border">
+      <div className="container max-w-5xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-10 items-start">
           
           {/* Left: Contact Info */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">Have a Project in Mind?</h2>
-            <p className="text-xl text-muted-foreground mb-12">Tell us what you want to build.</p>
+            <span className="text-xs font-semibold uppercase tracking-wider text-slate-600 px-3 py-1 bg-slate-100 rounded-md border border-slate-200 inline-block mb-3">
+              Get In Touch
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-foreground">Have a Project in Mind?</h2>
+            <p className="text-base text-muted-foreground mb-8 leading-relaxed">Tell us about your product requirements and goals.</p>
             
-            <div className="mb-12">
-              <h3 className="text-lg font-bold mb-4">Or contact us directly</h3>
-              <div className="flex flex-col gap-3 font-medium">
-                <a href={`mailto:${siteConfig.email}`} className="text-muted-foreground hover:text-foreground transition-colors">
-                  {siteConfig.email}
-                </a>
-              </div>
+            <div className="mb-8">
+              <h3 className="text-sm font-bold uppercase tracking-wide mb-2 text-foreground">Direct Email</h3>
+              <a href={`mailto:${siteConfig.email}`} className="text-sm font-medium text-slate-700 hover:text-foreground transition-colors">
+                {siteConfig.email}
+              </a>
             </div>
 
             <div>
-              <h3 className="text-lg font-bold mb-4">Connect With Me</h3>
-              <div className="flex gap-4">
-                <a href={siteConfig.socials.youtube} target="_blank" rel="noopener noreferrer" className="p-3 bg-background border border-border rounded-full hover:bg-muted transition-colors" aria-label="YouTube">
-                  <Video size={24} />
+              <h3 className="text-sm font-bold uppercase tracking-wide mb-3 text-foreground">Connect With Us</h3>
+              <div className="flex gap-2.5">
+                <a href={siteConfig.socials.youtube} target="_blank" rel="noopener noreferrer" className="p-2.5 bg-slate-50 border border-slate-200 rounded-md text-slate-700 hover:bg-slate-100 transition-colors" aria-label="YouTube">
+                  <Video size={18} />
                 </a>
-                <a href={siteConfig.socials.github} target="_blank" rel="noopener noreferrer" className="p-3 bg-background border border-border rounded-full hover:bg-muted transition-colors" aria-label="GitHub">
-                  <Code2 size={24} />
+                <a href={siteConfig.socials.github} target="_blank" rel="noopener noreferrer" className="p-2.5 bg-slate-50 border border-slate-200 rounded-md text-slate-700 hover:bg-slate-100 transition-colors" aria-label="GitHub">
+                  <Code2 size={18} />
                 </a>
-                <a href={siteConfig.socials.instagram} target="_blank" rel="noopener noreferrer" className="p-3 bg-background border border-border rounded-full hover:bg-muted transition-colors" aria-label="Instagram">
-                  <Camera size={24} />
+                <a href={siteConfig.socials.instagram} target="_blank" rel="noopener noreferrer" className="p-2.5 bg-slate-50 border border-slate-200 rounded-md text-slate-700 hover:bg-slate-100 transition-colors" aria-label="Instagram">
+                  <Camera size={18} />
                 </a>
               </div>
             </div>
           </div>
 
           {/* Right: Contact Form */}
-          <div className="bg-background border border-border p-8 rounded-3xl shadow-sm">
+          <div className="bg-slate-50/50 border border-border p-6 rounded-lg">
             {status && (
               <div
-                className={`mb-6 p-4 rounded-xl flex items-start gap-3 text-sm font-medium ${
+                className={`mb-5 p-3.5 rounded-md flex items-start gap-2.5 text-xs font-medium ${
                   status.type === "success"
-                    ? "bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-300"
-                    : "bg-red-500/10 border border-red-500/30 text-red-700 dark:text-red-300"
+                    ? "bg-emerald-50 border border-emerald-200 text-emerald-800"
+                    : "bg-red-50 border border-red-200 text-red-800"
                 }`}
               >
                 {status.type === "success" ? (
-                  <CheckCircle2 size={20} className="shrink-0 mt-0.5" />
+                  <CheckCircle2 size={16} className="shrink-0 mt-0.5" />
                 ) : (
-                  <AlertCircle size={20} className="shrink-0 mt-0.5" />
+                  <AlertCircle size={16} className="shrink-0 mt-0.5" />
                 )}
                 <span>{status.message}</span>
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4 text-xs sm:text-sm">
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="name" className="text-sm font-medium">Name</label>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="flex flex-col gap-1.5">
+                  <label htmlFor="name" className="font-medium text-slate-700">Name</label>
                   <input 
                     type="text" 
                     id="name" 
                     required 
                     value={formData.name}
                     onChange={handleChange}
-                    className="border border-border rounded-lg px-4 py-3 bg-muted/50 focus:bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" 
-                    placeholder="John Doe" 
+                    className="border border-slate-300 rounded-md px-3.5 py-2.5 bg-background text-foreground focus:border-slate-900 focus:outline-none transition-colors" 
+                    placeholder="Your Name" 
                   />
                 </div>
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="email" className="text-sm font-medium">Email</label>
+                <div className="flex flex-col gap-1.5">
+                  <label htmlFor="email" className="font-medium text-slate-700">Email</label>
                   <input 
                     type="email" 
                     id="email" 
                     required 
                     value={formData.email}
                     onChange={handleChange}
-                    className="border border-border rounded-lg px-4 py-3 bg-muted/50 focus:bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" 
-                    placeholder="john@example.com" 
+                    className="border border-slate-300 rounded-md px-3.5 py-2.5 bg-background text-foreground focus:border-slate-900 focus:outline-none transition-colors" 
+                    placeholder="yourname@example.com" 
                   />
                 </div>
               </div>
 
-              <div className="flex flex-col gap-2">
-                <label htmlFor="phone" className="text-sm font-medium">Phone / WhatsApp</label>
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="phone" className="font-medium text-slate-700">Phone / WhatsApp</label>
                 <input 
                   type="tel" 
                   id="phone" 
                   value={formData.phone}
                   onChange={handleChange}
-                  className="border border-border rounded-lg px-4 py-3 bg-muted/50 focus:bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" 
+                  className="border border-slate-300 rounded-md px-3.5 py-2.5 bg-background text-foreground focus:border-slate-900 focus:outline-none transition-colors" 
                   placeholder="+1 234 567 8900" 
                 />
               </div>
 
-              <div className="flex flex-col gap-2">
-                <label htmlFor="projectType" className="text-sm font-medium">Project Type</label>
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="projectType" className="font-medium text-slate-700">Project Type</label>
                 <select 
                   id="projectType" 
                   value={formData.projectType}
                   onChange={handleChange}
-                  className="border border-border rounded-lg px-4 py-3 bg-muted/50 focus:bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-foreground appearance-none"
+                  className="border border-slate-300 rounded-md px-3.5 py-2.5 bg-background text-foreground focus:border-slate-900 focus:outline-none transition-colors"
                 >
                   <option>Website</option>
                   <option>Android App</option>
@@ -179,15 +180,15 @@ export function Contact() {
                 </select>
               </div>
 
-              <div className="flex flex-col gap-2">
-                <label htmlFor="description" className="text-sm font-medium">Project Description</label>
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="description" className="font-medium text-slate-700">Project Description</label>
                 <textarea 
                   id="description" 
                   required 
                   rows={4} 
                   value={formData.description}
                   onChange={handleChange}
-                  className="border border-border rounded-lg px-4 py-3 bg-muted/50 focus:bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-y" 
+                  className="border border-slate-300 rounded-md px-3.5 py-2.5 bg-background text-foreground focus:border-slate-900 focus:outline-none transition-colors resize-y" 
                   placeholder="Tell us about your project requirements..." 
                 />
               </div>
@@ -195,10 +196,10 @@ export function Contact() {
               <button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="mt-4 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-opacity flex items-center justify-center gap-2 disabled:opacity-70"
+                className="mt-2 bg-foreground text-background px-6 py-3 rounded-md font-medium text-sm hover:bg-foreground/90 transition-colors flex items-center justify-center gap-2 disabled:opacity-70"
               >
-                {isSubmitting ? "Sending to Firebase..." : "Send Project Request"}
-                {!isSubmitting && <ArrowRight size={18} />}
+                {isSubmitting ? "Submitting..." : "Send Request"}
+                {!isSubmitting && <ArrowRight size={16} />}
               </button>
             </form>
           </div>

@@ -15,37 +15,40 @@ const examples = [
 
 export function WhatWeBuild() {
   return (
-    <section className="section-padding bg-primary text-primary-foreground">
+    <section className="section-padding bg-background border-b border-border">
       <div className="container">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <span className="text-xs font-semibold uppercase tracking-wider text-slate-600 px-3 py-1 bg-slate-100 rounded-md border border-slate-200 inline-block mb-3">
+            Custom Solutions
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-foreground">
             Got an Idea?
           </h2>
-          <p className="text-lg md:text-xl text-primary-foreground/80 mb-12 max-w-2xl mx-auto">
-            Tell us what you want to build. We can help turn your idea into a real website, mobile app or software product.
+          <p className="text-base sm:text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
+            Tell us what you want to build. We turn your ideas into functional websites, mobile apps, and software products.
           </p>
           
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
+          <div className="flex flex-wrap justify-center gap-2.5 mb-12">
             {examples.map((example, idx) => (
               <div 
                 key={idx} 
-                className="flex items-center gap-2 bg-primary-foreground/10 px-5 py-3 rounded-full border border-primary-foreground/20"
+                className="flex items-center gap-2 bg-slate-50 px-4 py-2.5 rounded-md border border-slate-200 text-slate-800"
               >
-                <CheckCircle2 size={18} className="text-primary-foreground/60" />
-                <span className="text-sm font-medium">{example}</span>
+                <CheckCircle2 size={16} className="text-slate-600 shrink-0" />
+                <span className="text-xs sm:text-sm font-medium">{example}</span>
               </div>
             ))}
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <p className="text-xl font-medium mb-8">
+            <p className="text-base font-medium mb-6 text-foreground">
               Your idea doesn&apos;t have to be complicated.
             </p>
             <Link 
               href="#contact" 
-              className="bg-background text-foreground px-8 py-4 rounded-full font-bold hover:bg-muted transition-colors flex items-center gap-2"
+              className="bg-foreground text-background px-6 py-3 rounded-md font-medium text-sm hover:bg-foreground/90 transition-colors flex items-center gap-2"
             >
-              Let&apos;s Build It <ArrowRight size={18} />
+              Let&apos;s Build It <ArrowRight size={16} />
             </Link>
           </div>
         </div>

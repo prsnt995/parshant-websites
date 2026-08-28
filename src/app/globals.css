@@ -2,23 +2,23 @@
 
 @theme {
   --color-background: #ffffff;
-  --color-foreground: #0a0a0b;
+  --color-foreground: #111827;
   --color-primary: #111827;
   --color-primary-foreground: #ffffff;
-  --color-muted: #f3f4f6;
-  --color-muted-foreground: #6b7280;
-  --color-border: #e5e7eb;
+  --color-muted: #f8fafc;
+  --color-muted-foreground: #475569;
+  --color-border: #e2e8f0;
 }
 
 @layer base {
   :root {
     --background: #ffffff;
-    --foreground: #0a0a0b;
+    --foreground: #111827;
     --primary: #111827;
     --primary-foreground: #ffffff;
-    --muted: #f3f4f6;
-    --muted-foreground: #6b7280;
-    --border: #e5e7eb;
+    --muted: #f8fafc;
+    --muted-foreground: #475569;
+    --border: #e2e8f0;
   }
 
   * {
@@ -26,16 +26,16 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground antialiased selection:bg-gray-200 selection:text-gray-900;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
 @layer utilities {
   .section-padding {
-    @apply py-20 md:py-32;
+    @apply py-16 md:py-24;
   }
   .container {
-    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8;
   }
 }
