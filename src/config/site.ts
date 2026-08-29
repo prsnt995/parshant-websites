@@ -4,11 +4,11 @@ export const siteConfig = {
   description: "AI Models, iOS & Android Apps, and Custom Web Solutions.",
   owner: "Parshant",
   founder: "Parshant",
-  email: "parshanttanwar995@gmail.com",
+  email: "noeulenterprises@gmail.com",
   socials: {
     youtube: "https://www.youtube.com/@parshantinkore",
     github: "https://github.com/prshant995",
-    instagram: "https://www.instagram.com/parshantinkorea",
+    instagram: "https://www.instagram.com/noeulenterprises/",
   },
   links: {
     home: "/",
