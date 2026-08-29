@@ -198,7 +198,7 @@ export function Contact() {
                 disabled={isSubmitting}
                 className="mt-2 bg-foreground text-background px-6 py-3 rounded-md font-medium text-sm hover:bg-foreground/90 transition-colors flex items-center justify-center gap-2 disabled:opacity-70"
               >
-                {isSubmitting ? "Submitting..." : "Send Request"}
+                {isSubmitting ? "Sending..." : "Send Message"}
                 {!isSubmitting && <ArrowRight size={16} />}
               </button>
             </form>

@@ -1,64 +1,61 @@
-import { Cpu, Smartphone, Code2, Brain, CheckCircle2, Globe2 } from "lucide-react";
+import { Cpu, Smartphone, Code2, Brain, CheckCircle2, Globe, SmartphoneNfc } from "lucide-react";
 
 const services = [
   {
-    id: "ai-models",
-    title: "AI Models & AI App Development",
-    badge: "Cutting-Edge AI",
+    id: "ai-ml",
+    title: "AI & Machine Learning",
+    badge: "Artificial Intelligence",
     icon: <Brain className="w-6 h-6 text-slate-800" />,
     items: [
-      "Custom AI Models & LLM Integration",
-      "AI Assistants & Autonomous Agents",
-      "Computer Vision & Predictive Models",
-      "AI-Powered Mobile & Web Apps"
-    ]
-  },
-  {
-    id: "cloud-infrastructure",
-    title: "Cloud & API Infrastructure",
-    badge: "Reliable & Scalable",
-    icon: <Globe2 className="w-6 h-6 text-slate-800" />,
-    items: [
-      "RESTful & GraphQL API Architecture",
-      "Cloud Database Design (Firebase, PostgreSQL)",
-      "Serverless Deployments & Microservices",
-      "High Availability & Security Best Practices"
-    ]
-  },
-  {
-    id: "mobile-apps",
-    title: "iOS & Android App Development",
-    badge: "Cross-Platform & Native",
-    icon: <Smartphone className="w-6 h-6 text-slate-800" />,
-    items: [
-      "Native iOS Apps (Swift / SwiftUI)",
-      "Native Android Apps (Kotlin / Jetpack)",
-      "Cross-Platform Apps (React Native)",
-      "App Store & Google Play Publishing"
+      "AI model development",
+      "AI-powered applications",
+      "Intelligent automation"
     ]
   },
   {
     id: "web-dev",
-    title: "Custom Web Applications",
-    badge: "Fast & Modern",
-    icon: <Code2 className="w-6 h-6 text-slate-800" />,
+    title: "Web Development",
+    badge: "Web Applications",
+    icon: <Globe className="w-6 h-6 text-slate-800" />,
     items: [
-      "High-Performance Next.js Websites",
-      "Full-stack Web Platforms",
-      "Admin Dashboards & Management Tools",
-      "SEO Optimized & Ultra-Fast Loading"
+      "Modern websites",
+      "E-commerce websites",
+      "Business websites",
+      "Web applications"
     ]
   },
   {
-    id: "software",
-    title: "Enterprise Custom Software",
-    badge: "Scalable Architecture",
-    icon: <Cpu className="w-6 h-6 text-slate-800" />,
+    id: "android-dev",
+    title: "Android Development",
+    badge: "Mobile Apps",
+    icon: <Smartphone className="w-6 h-6 text-slate-800" />,
     items: [
-      "Business Automation Systems",
-      "Cloud Infrastructure & APIs",
-      "Database Architecture & Security",
-      "SaaS Platform Development"
+      "Android applications",
+      "Mobile solutions",
+      "Native Android performance"
+    ]
+  },
+  {
+    id: "ios-dev",
+    title: "iOS Development",
+    badge: "Apple Ecosystem",
+    icon: <SmartphoneNfc className="w-6 h-6 text-slate-800" />,
+    items: [
+      "iPhone and iPad applications",
+      "Native mobile experiences",
+      "App Store publishing"
+    ]
+  },
+  {
+    id: "software-dev",
+    title: "Software Development",
+    badge: "Custom Engineering",
+    icon: <Code2 className="w-6 h-6 text-slate-800" />,
+    items: [
+      "Custom software",
+      "APIs & Integration",
+      "Backend systems",
+      "Database integration"
     ]
   }
 ];
