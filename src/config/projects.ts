@@ -29,19 +29,19 @@ export const initialProjects: Project[] = [
     createdAt: "2026-08-28"
   },
   {
-    id: "shdmf-clothing",
-    title: "SHDMF Korean Clothing Brand",
-    description: "Contemporary streetwear & modern Korean fashion e-commerce storefront with curated lookbooks, sizing guide, and online checkout.",
-    fullDescription: "SHDMF is a modern Korean fashion and clothing brand e-commerce platform designed to deliver an immersive shopping experience. It features high-resolution aesthetic lookbooks, seasonal apparel drops, size guides, seamless bag/cart workflows, and secure online payment processing.",
+    id: "noeul-clothing",
+    title: "NOEUL (노을) Korean Clothing Brand",
+    description: "Contemporary streetwear & modern Korean fashion e-commerce storefront with curated lookbooks, seasonal drops, and online checkout.",
+    fullDescription: "NOEUL (노을) is a modern Korean fashion and clothing brand e-commerce platform designed to deliver an aesthetic, minimalist shopping experience. It features high-resolution lookbooks, seasonal apparel drops, size guides, seamless shopping bag workflows, and Korean payment gateway integration.",
     category: "Website",
     status: "In Development",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Firebase", "Stripe / Toss Payments"],
     features: [
-      "Curated Streetwear & Fashion Collection Catalog",
-      "High-Resolution Interactive Lookbooks & Product Showcase",
-      "Dynamic Shopping Cart & Instant Checkout Experience",
-      "Responsive Mobile-First Fashion Storefront Design",
-      "Order Management & Customer Profile System"
+      "Curated Korean Streetwear & Apparel Lookbook",
+      "Dynamic Shopping Bag & Quick Checkout Workflow",
+      "Korean Domestic & International Payment Processing",
+      "Minimalist Modern Fashion Storefront Design",
+      "Real-Time Order Tracking & Customer Accounts"
     ],
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop",
     screenshots: [
@@ -50,7 +50,7 @@ export const initialProjects: Project[] = [
       "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=1200&auto=format&fit=crop"
     ],
     links: {
-      liveUrl: "https://shdmf.kr",
+      liveUrl: "https://noeul.kr",
       githubUrl: "https://github.com/prsnt995"
     },
     createdAt: "2026-08-25"
