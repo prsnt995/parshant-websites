@@ -1,7 +1,7 @@
 import { Project } from "@/types/project";
 import { initialProjects } from "@/config/projects";
 
-const STORAGE_KEY = "noeul_enterprises_projects_v1";
+const STORAGE_KEY = "noeul_enterprises_projects_v3";
 
 export function getStoredProjects(): Project[] {
   if (typeof window === "undefined") {
