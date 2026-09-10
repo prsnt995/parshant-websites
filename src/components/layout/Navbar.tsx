@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { Menu, X, Cpu } from "lucide-react";
 import { useState } from "react";
@@ -13,7 +14,16 @@ export function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="font-bold text-lg tracking-tight text-foreground flex items-center gap-2">
+        <Link href="/" className="font-bold text-lg tracking-tight text-foreground flex items-center gap-2.5 group">
+          <div className="relative w-9 h-9 rounded-md overflow-hidden shrink-0 bg-white p-0.5 border border-slate-200 shadow-2xs group-hover:scale-105 transition-transform">
+            <Image
+              src="/images/noeul-enterprises-logo.png"
+              alt={`${siteConfig.name} Logo`}
+              fill
+              className="object-contain p-0.5"
+              priority
+            />
+          </div>
           <span>{siteConfig.name}</span>
         </Link>
 
@@ -27,8 +37,7 @@ export function Navbar() {
             <span>AI Models</span>
           </Link>
 
-          <Link href="#projects" className="hover:text-foreground transition-colors">Projects</Link>
-          <Link href="#about" className="hover:text-foreground transition-colors">About</Link>
+          <Link href="#projects" className="hover:text-foreground transition-colors">Our Businesses</Link>
           
           <Link 
             href="#contact" 
@@ -52,8 +61,7 @@ export function Navbar() {
           <Link href="#ai-solutions" onClick={toggleMenu} className="flex items-center gap-2 py-2 hover:text-foreground">
             <Cpu size={16} /> AI Models & Apps
           </Link>
-          <Link href="#projects" onClick={toggleMenu} className="block py-2 hover:text-foreground">Projects</Link>
-          <Link href="#about" onClick={toggleMenu} className="block py-2 hover:text-foreground">About</Link>
+          <Link href="#projects" onClick={toggleMenu} className="block py-2 hover:text-foreground">Our Businesses</Link>
           <Link href="#contact" onClick={toggleMenu} className="block py-2 hover:text-foreground">Contact</Link>
           <Link 
             href="#contact" 

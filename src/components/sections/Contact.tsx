@@ -1,7 +1,6 @@
 "use client";
 
-import { siteConfig } from "@/config/site";
-import { Video, Code2, Camera, ArrowRight, CheckCircle2, AlertCircle } from "lucide-react";
+import { ArrowRight, CheckCircle2, AlertCircle } from "lucide-react";
 import { FormEvent, useState } from "react";
 
 export function Contact() {
@@ -78,28 +77,6 @@ export function Contact() {
             </span>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-foreground">Have a Project in Mind?</h2>
             <p className="text-base text-muted-foreground mb-8 leading-relaxed">Tell us about your product requirements and goals.</p>
-            
-            <div className="mb-8">
-              <h3 className="text-sm font-bold uppercase tracking-wide mb-2 text-foreground">Direct Email</h3>
-              <a href={`mailto:${siteConfig.email}`} className="text-sm font-medium text-slate-700 hover:text-foreground transition-colors">
-                {siteConfig.email}
-              </a>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-bold uppercase tracking-wide mb-3 text-foreground">Connect With Us</h3>
-              <div className="flex gap-2.5">
-                <a href={siteConfig.socials.youtube} target="_blank" rel="noopener noreferrer" className="p-2.5 bg-slate-50 border border-slate-200 rounded-md text-slate-700 hover:bg-slate-100 transition-colors" aria-label="YouTube">
-                  <Video size={18} />
-                </a>
-                <a href={siteConfig.socials.github} target="_blank" rel="noopener noreferrer" className="p-2.5 bg-slate-50 border border-slate-200 rounded-md text-slate-700 hover:bg-slate-100 transition-colors" aria-label="GitHub">
-                  <Code2 size={18} />
-                </a>
-                <a href={siteConfig.socials.instagram} target="_blank" rel="noopener noreferrer" className="p-2.5 bg-slate-50 border border-slate-200 rounded-md text-slate-700 hover:bg-slate-100 transition-colors" aria-label="Instagram">
-                  <Camera size={18} />
-                </a>
-              </div>
-            </div>
           </div>
 
           {/* Right: Contact Form */}
