@@ -1,20 +1,30 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
+import { getAnalytics, isSupported, Analytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || "AIzaSyBngqgLTpQSzcyfvzqjgugOyEpmCBVt588",
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || "noeulenterprise.firebaseapp.com",
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || "noeulenterprise",
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || "noeulenterprise.firebasestorage.app",
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || "739674179224",
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || "1:739674179224:web:6e4026dce52ae451c3f2ed",
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID || "G-WEX1WY4QBH",
 };
 
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 const db = getFirestore(app);
 const auth = getAuth(app);
+
+let analytics: Analytics | null = null;
+if (typeof window !== "undefined") {
+  isSupported().then((supported) => {
+    if (supported) {
+      analytics = getAnalytics(app);
+    }
+  });
+}
 
 export interface ContactSubmission {
   name: string;
@@ -28,8 +38,8 @@ export interface ContactSubmission {
  * Save contact inquiry to Firebase Firestore using REST API for instant execution
  */
 export async function saveContactSubmission(data: ContactSubmission) {
-  const projectId = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || "noeul-970ff";
-  const apiKey = process.env.NEXT_PUBLIC_FIREBASE_API_KEY || "";
+  const projectId = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || "noeulenterprise";
+  const apiKey = process.env.NEXT_PUBLIC_FIREBASE_API_KEY || "AIzaSyBngqgLTpQSzcyfvzqjgugOyEpmCBVt588";
   const collectionName = process.env.NEXT_PUBLIC_FIREBASE_COLLECTION || "noeul connect";
 
   const url = `https://firestore.googleapis.com/v1/projects/${projectId}/databases/(default)/documents/${encodeURIComponent(collectionName)}?key=${apiKey}`;
@@ -79,4 +89,5 @@ export async function saveContactSubmission(data: ContactSubmission) {
   }
 }
 
-export { app, db, auth };
+export { app, db, auth, analytics, firebaseConfig };
+
