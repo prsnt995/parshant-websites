@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "NOEUL ENTERPRISES",
   tagline: "Building Ideas Into Technology",
-  url: "https://noeulenterprises.kr",
+  url: "https://noeulenterprises.com",
   description: "NOEUL ENTERPRISES is a technology-focused company creating AI models, websites, Android applications, iOS applications, and innovative digital projects.",
   owner: "Parshant",
   founder: "Parshant",
