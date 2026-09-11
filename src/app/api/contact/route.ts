@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     });
 
     // 2. Trigger email notification to owner
-    await sendContactNotificationEmail({
+    const emailResult = await sendContactNotificationEmail({
       name,
       email,
       phone: phone || "",
@@ -32,30 +32,27 @@ export async function POST(request: Request) {
       description,
     });
 
-    if (!firebaseResult.success) {
-      if (firebaseResult.isPermissionDenied) {
-        console.warn("[Firestore Warning] Submission received but Firestore rules locked write permission.");
-        return NextResponse.json({
-          success: true,
-          warning: "Project request received! Note: To save to Firestore database, publish rules in Firebase Console -> Firestore -> Rules tab (allow create: if true;).",
-          id: "pending-rules",
-        });
-      }
+    if (!emailResult.sent) {
+      console.warn("[Contact API Warning] Email notification could not be sent:", emailResult.error);
+    }
 
-      return NextResponse.json(
-        { 
-          success: false, 
-          error: firebaseResult.error || "Failed to save submission to Firebase.",
-          hint: "Please verify your Firebase environment variables in .env.local"
-        },
-        { status: 500 }
-      );
+    if (!firebaseResult.success) {
+      if (firebaseResult.isDatabaseNotFound) {
+        console.warn("[Firestore Notice] Submission received, but Cloud Firestore database is not created yet in Firebase Console for project 'noeulenterprise'. Create it at https://console.cloud.google.com/datastore/setup?project=noeulenterprise");
+      } else if (firebaseResult.isPermissionDenied) {
+        console.warn("[Firestore Notice] Submission received, but Firestore security rules locked write permission.");
+      } else {
+        console.warn("[Firestore Notice] Submission received, but saving to Firestore failed:", firebaseResult.error);
+      }
     }
 
     return NextResponse.json({
       success: true,
-      message: "Project request submitted! Saved to Firebase and email notification sent.",
-      id: firebaseResult.id,
+      emailSent: emailResult.sent,
+      message: emailResult.sent 
+        ? "Thank you! Your project request has been submitted and sent to our email." 
+        : "Thank you! Your project request has been received.",
+      id: firebaseResult.id || "received",
     });
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : "Internal server error";
@@ -65,3 +62,4 @@ export async function POST(request: Request) {
     );
   }
 }
+

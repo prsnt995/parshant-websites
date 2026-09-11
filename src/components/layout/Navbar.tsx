@@ -20,6 +20,7 @@ export function Navbar() {
               src="/images/noeul-enterprises-logo.png"
               alt={`${siteConfig.name} Logo`}
               fill
+              sizes="36px"
               className="object-contain p-0.5"
               priority
             />

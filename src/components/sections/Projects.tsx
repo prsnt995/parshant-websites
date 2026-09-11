@@ -71,6 +71,7 @@ export function Projects() {
                         src={project.logo}
                         alt={`${project.title} logo`}
                         fill
+                        sizes="56px"
                         className="object-contain p-0.5 rounded-full"
                       />
                     </div>

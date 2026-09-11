@@ -70,6 +70,14 @@ export async function saveContactSubmission(data: ContactSubmission) {
       return { success: true, id: docName };
     }
 
+    if (res.status === 404 || (result.error && (result.error.status === "NOT_FOUND" || result.error.code === 404))) {
+      return {
+        success: false,
+        error: "Firestore database is not created yet in Firebase Console.",
+        isDatabaseNotFound: true,
+      };
+    }
+
     if (res.status === 403 || (result.error && result.error.status === "PERMISSION_DENIED")) {
       return {
         success: false,
