@@ -18,6 +18,12 @@ export const siteConfig = {
     projects: "#projects",
     about: "#about",
     contact: "#contact",
+  },
+  legal: {
+    privacy: "/privacy",
+    terms: "/terms",
+    cookies: "/cookies",
+    disclaimer: "/disclaimer",
   }
 };
 

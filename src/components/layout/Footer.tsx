@@ -54,7 +54,16 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div>
+        <div className="flex flex-col sm:flex-row items-center gap-3">
+          <div className="flex items-center gap-1.5 text-[11px]">
+            <Link href={siteConfig.legal.privacy} className="hover:text-foreground hover:underline">Privacy</Link>
+            <span className="text-slate-300">·</span>
+            <Link href={siteConfig.legal.terms} className="hover:text-foreground hover:underline">Terms</Link>
+            <span className="text-slate-300">·</span>
+            <Link href={siteConfig.legal.cookies} className="hover:text-foreground hover:underline">Cookies</Link>
+            <span className="text-slate-300">·</span>
+            <Link href={siteConfig.legal.disclaimer} className="hover:text-foreground hover:underline">Disclaimer</Link>
+          </div>
           <p>© 2026 {siteConfig.name}. All rights reserved.</p>
         </div>
 
