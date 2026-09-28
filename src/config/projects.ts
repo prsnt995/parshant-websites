@@ -50,7 +50,7 @@ export const initialProjects: Project[] = [
       "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=1200&auto=format&fit=crop"
     ],
     links: {
-      liveUrl: "https://noeul.kr",
+      liveUrl: "https://noeul.me",
       githubUrl: "https://github.com/prsnt995"
     },
     createdAt: "2026-08-25"
