@@ -63,6 +63,23 @@ export function About() {
             ))}
           </div>
 
+          {/* Leadership Banner */}
+          <div className="bg-background border border-slate-200 rounded-xl p-6 mb-10 max-w-xl mx-auto flex items-center gap-4 text-left shadow-sm">
+            <div className="w-12 h-12 rounded-full bg-slate-900 text-slate-50 flex items-center justify-center font-bold text-lg shrink-0">
+              P
+            </div>
+            <div>
+              <div className="flex items-center gap-2 mb-0.5">
+                <h4 className="font-bold text-base text-slate-900">{siteConfig.founder}</h4>
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 uppercase tracking-wider">
+                  Leadership
+                </span>
+              </div>
+              <p className="text-xs font-semibold text-slate-600 mb-1">{siteConfig.role}</p>
+              <p className="text-xs text-slate-500">{siteConfig.name}</p>
+            </div>
+          </div>
+
           <Link 
             href="#contact" 
             className="inline-block bg-foreground text-background px-6 py-3 rounded-md font-medium text-sm hover:bg-foreground/90 transition-colors"

@@ -5,6 +5,7 @@ export const siteConfig = {
   description: "NOEUL ENTERPRISES is a technology-focused company creating AI models, websites, Android applications, iOS applications, and innovative digital projects.",
   owner: "Parshant",
   founder: "Parshant",
+  role: "Founder & Chief Executive Officer",
   email: "noeulenterprises@gmail.com",
   socials: {
     youtube: "https://www.youtube.com/@parshantinkore",

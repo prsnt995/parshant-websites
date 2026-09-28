@@ -54,7 +54,7 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="flex flex-col sm:flex-row items-center gap-3">
+        <div className="flex flex-col items-center md:items-end gap-1.5">
           <div className="flex items-center gap-1.5 text-[11px]">
             <Link href={siteConfig.legal.privacy} className="hover:text-foreground hover:underline">Privacy</Link>
             <span className="text-slate-300">·</span>
@@ -64,7 +64,10 @@ export function Footer() {
             <span className="text-slate-300">·</span>
             <Link href={siteConfig.legal.disclaimer} className="hover:text-foreground hover:underline">Disclaimer</Link>
           </div>
-          <p>© 2026 {siteConfig.name}. All rights reserved.</p>
+          <p className="text-[11px] font-medium text-slate-600">
+            {siteConfig.founder} — {siteConfig.role}, {siteConfig.name}
+          </p>
+          <p className="text-[11px] text-slate-400">© 2026 {siteConfig.name}. All rights reserved.</p>
         </div>
 
       </div>
