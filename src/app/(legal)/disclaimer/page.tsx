@@ -26,7 +26,7 @@ export default function DisclaimerPage() {
         </section>
         <section>
           <h2 className="text-lg font-bold text-foreground mb-2">3. External Links</h2>
-          <p>Links to external sites (e.g., YouTube, GitHub, Instagram, namastemart.me, noeul.me) are not endorsements. We are not responsible for their content or availability.</p>
+          <p>Links to external sites (e.g., YouTube, GitHub, Instagram, namastemart.me, www.noeul.me) are not endorsements. We are not responsible for their content or availability.</p>
         </section>
         <section>
           <h2 className="text-lg font-bold text-foreground mb-2">4. No Warranty</h2>

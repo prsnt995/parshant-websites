@@ -14,6 +14,11 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  icons: {
+    icon: "/images/noeul-logo.png",
+    shortcut: "/images/noeul-logo.png",
+    apple: "/images/noeul-logo.png",
+  },
 };
 
 export default function RootLayout({
