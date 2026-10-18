@@ -75,7 +75,7 @@ export const initialProjects: Project[] = [
       "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80"
     ],
     links: {
-      liveUrl: "https://prsnt995-pks.vercel.app/",
+      liveUrl: "https://pks-three.vercel.app/",
       githubUrl: "https://github.com/prsnt995"
     },
     createdAt: "2026-10-18"
