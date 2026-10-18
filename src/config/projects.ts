@@ -56,6 +56,31 @@ export const initialProjects: Project[] = [
     createdAt: "2026-08-25"
   },
   {
+    id: "nexpora",
+    title: "NEXPORA",
+    description: "Modern multi-venture corporate portfolio uniting engineering systems, digital innovation, creative services, and AI media production.",
+    fullDescription: "NEXPORA is a high-performance multi-venture corporate portfolio and digital platform uniting precision engineering, interactive design studios, AI video generation, and contemporary lifestyle brands under one cohesive digital ecosystem.",
+    category: "Website",
+    status: "Completed",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React", "Turbopack", "Vercel"],
+    features: [
+      "Multi-Venture Corporate Network Architecture",
+      "Interactive Company Directory & Profile Pages",
+      "Modern Dark-Aesthetic Visual Identity & Responsive UI",
+      "Engineering, Digital Studio, and AI Media Integration"
+    ],
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    screenshots: [
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80"
+    ],
+    links: {
+      liveUrl: "https://prsnt995-pks.vercel.app/",
+      githubUrl: "https://github.com/prsnt995"
+    },
+    createdAt: "2026-10-18"
+  },
+  {
     id: "noeul-ai-engine",
     title: "NOEUL AI Model & Assistant Engine",
     description: "Generative AI model platform powering autonomous task workflows, LLM fine-tuning, and vision analytics.",

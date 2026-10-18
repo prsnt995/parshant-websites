@@ -1,6 +1,6 @@
 "use client";
 
-import { ExternalLink, ShoppingBag, Shirt, Globe } from "lucide-react";
+import { ExternalLink, ShoppingBag, Shirt, Globe, Layers } from "lucide-react";
 import Image from "next/image";
 
 interface ProjectItem {
@@ -35,6 +35,16 @@ const projects: ProjectItem[] = [
     logo: "/images/noeul-logo.png",
     icon: <Shirt className="w-6 h-6 text-slate-800" />,
   },
+  {
+    id: "nexpora",
+    title: "NEXPORA",
+    category: "Multi-Venture Portfolio",
+    description: "Multi-venture corporate portfolio uniting engineering systems, digital studio services, AI media production, and modern brand ventures.",
+    websiteDisplay: "prsnt995-pks.vercel.app",
+    websiteUrl: "https://prsnt995-pks.vercel.app/",
+    logo: "/images/nexpora-logo.png",
+    icon: <Layers className="w-6 h-6 text-slate-800" />,
+  },
 ];
 
 export function Projects() {
@@ -55,8 +65,8 @@ export function Projects() {
           </p>
         </div>
 
-        {/* Projects Cards Grid - 2 Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {/* Projects Cards Grid - 3 Column Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {projects.map((project) => (
             <div
               key={project.id}
