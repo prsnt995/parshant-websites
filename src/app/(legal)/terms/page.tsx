@@ -46,7 +46,7 @@ export default function TermsPage() {
         </section>
         <section>
           <h2 className="text-lg font-bold text-foreground mb-2">7. External Links</h2>
-          <p>Links to external sites (e.g., namastemart.me, www.noeul.me, pks-three.vercel.app, GitHub, Instagram) are for convenience; we are not responsible for their content.</p>
+          <p>Links to external sites (e.g., namastemart.me, www.noeul.me, pks-three.vercel.app, inter-view-gamma.vercel.app, GitHub, Instagram) are for convenience; we are not responsible for their content.</p>
         </section>
         <section>
           <h2 className="text-lg font-bold text-foreground mb-2">8. Termination</h2>

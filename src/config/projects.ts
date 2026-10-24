@@ -81,6 +81,31 @@ export const initialProjects: Project[] = [
     createdAt: "2026-10-18"
   },
   {
+    id: "interview553",
+    title: "Interview553 Official Online Boutique",
+    description: "Modern luxury fashion house and online boutique featuring curated runway collections, designer apparel, and seasonal editorial drops.",
+    fullDescription: "Interview553 is a modern luxury fashion brand and official online boutique crafted for high-end designer apparel, seasonal collection showcases, and an immersive editorial shopping experience. Features high-resolution boutique galleries, bespoke fashion lookbooks, and sleek digital storefront interactions.",
+    category: "Website",
+    status: "Completed",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    features: [
+      "Luxury Fashion House & Official Boutique Storefront",
+      "Curated Seasonal Runway & Editorial Collections",
+      "High-Resolution Lookbooks & Designer Showcases",
+      "Responsive High-Performance Boutique Experience"
+    ],
+    image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop",
+    screenshots: [
+      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=1200&auto=format&fit=crop"
+    ],
+    links: {
+      liveUrl: "https://inter-view-gamma.vercel.app/",
+      githubUrl: "https://github.com/prsnt995"
+    },
+    createdAt: "2026-10-24"
+  },
+  {
     id: "noeul-ai-engine",
     title: "NOEUL AI Model & Assistant Engine",
     description: "Generative AI model platform powering autonomous task workflows, LLM fine-tuning, and vision analytics.",
